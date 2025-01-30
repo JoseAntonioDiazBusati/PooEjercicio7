@@ -20,12 +20,26 @@ Métodos de clase:
    podido realizar o no la operación.
 
 En el programa principal, instanciar un objeto Persona con un DNI cualquiera,
-así como dos objetos cuenta, una sin saldo inicial y otra con 700 euros. La persona recibe la nómina mensual, por lo que ingresa 1100 euros en la primera cuenta, pero tiene que pagar el alquiler de 750 euros con la segunda. Imprimir por pantalla si la persona es morosa.
+así como dos objetos cuenta, una sin saldo inicial y otra con 700 euros. La persona recibe la nómina mensual,
+por lo que ingresa 1100 euros en la primera cuenta, pero tiene que pagar el alquiler de 750 euros con la segunda.
+Imprimir por pantalla si la persona es morosa.
 
 Posteriormente hacer una transferencia de una cuenta a otra (de forma que todos los saldos sean positivos)
 y mostrar por pantalla el estado de la persona.
 */
 
 fun main() {
+    val persona1 = Persona("23414356J")
+    val cuenta1 = Cuenta(1,0.0)
+    val cuenta2 = Cuenta(2,700.0)
+    persona1.anadirCuenta(cuenta1)
+    persona1.anadirCuenta(cuenta2)
 
+    cuenta1.recibirAbonos(1000.0)
+    cuenta2.realizarPagos(750.0)
+
+    persona1.esMoroso()
+
+    persona1.transferir(cuenta1,cuenta2,100.0)
+    println(persona1)
 }
