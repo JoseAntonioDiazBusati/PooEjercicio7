@@ -38,7 +38,7 @@ fun main() {
     cuenta1.recibirAbonos(1000.0)
     cuenta2.realizarPagos(750.0)
 
-    persona1.esMoroso()
+    println("¿Es moroso?: ${persona1.esMoroso()}")
 
     persona1.transferir(cuenta1,cuenta2,100.0)
     println(persona1)

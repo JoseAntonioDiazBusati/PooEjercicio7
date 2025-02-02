@@ -25,7 +25,7 @@ class Persona(val dni: String) {
     }
 
     override fun toString(): String {
-        return "DNI: $dni"
+        return "DNI: $dni,cuentas: $cuentas"
     }
 
 }
